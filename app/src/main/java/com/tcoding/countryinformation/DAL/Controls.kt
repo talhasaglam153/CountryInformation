@@ -7,7 +7,13 @@ object Controls {
     fun internetControl(cm : ConnectivityManager) : Boolean{
         var netInfos = cm.allNetworkInfo
 
-       return true
+        netInfos.forEach {
+            if(it.type == ConnectivityManager.TYPE_WIFI && it.type == ConnectivityManager.TYPE_MOBILE && it.isConnected) {
+                return true
+            }
+        }
+
+       return false
 
     }
 
