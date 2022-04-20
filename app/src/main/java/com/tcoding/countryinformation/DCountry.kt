@@ -1,8 +1,6 @@
 package com.tcoding.countryinformation
 
-import com.google.gson.annotations.SerializedName
-
-class Deneme : ArrayList<Deneme.DenemeItem>(){
+class DCountry : ArrayList<DCountry.DenemeItem>(){
     data class DenemeItem(
         val name : Name,
         val capital : List<String>,

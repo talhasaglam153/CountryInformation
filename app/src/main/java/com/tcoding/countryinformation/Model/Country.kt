@@ -6,5 +6,5 @@ class Country(
     var capital : String?,
     var population : String?,
     var borders : String?
-    ) {
+) {
 }

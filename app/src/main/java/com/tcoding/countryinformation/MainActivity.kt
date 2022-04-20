@@ -8,7 +8,6 @@ import com.google.gson.Gson
 
 import com.tcoding.countryinformation.DAL.WebServicesAsync
 import com.tcoding.countryinformation.Model.Country
-import com.tcoding.countryinformation.Model.DCountry
 import com.tcoding.countryinformation.View.Adapter.CountryAdapter
 import com.tcoding.countryinformation.databinding.ActivityMainBinding
 
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         if(code == 200) {
             val gson = Gson()
-            val resultData = gson.fromJson(message, Deneme::class.java)
+            val resultData = gson.fromJson(message, DCountry::class.java)
 
             resultData.forEach {
                 borders = ""
