@@ -1,4 +1,4 @@
-package com.tcoding.countryinformation
+package com.tcoding.countryinformation.Model
 
 class DCountry : ArrayList<DCountry.DenemeItem>(){
     data class DenemeItem(

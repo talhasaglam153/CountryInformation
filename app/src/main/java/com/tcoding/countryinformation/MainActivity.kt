@@ -2,12 +2,14 @@ package com.tcoding.countryinformation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 
 import com.tcoding.countryinformation.DAL.WebServicesAsync
 import com.tcoding.countryinformation.Model.Country
+import com.tcoding.countryinformation.Model.DCountry
 import com.tcoding.countryinformation.View.Adapter.CountryAdapter
 import com.tcoding.countryinformation.databinding.ActivityMainBinding
 
@@ -62,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                 ))
             }
             binding.rv.adapter = CountryAdapter(this, countryList)
+            binding.progressBar.visibility = View.GONE
 
         }else if(code == 0){
             Toast.makeText(this, "Lütfen internet bağlantınız kontrol ediniz", Toast.LENGTH_SHORT).show()
